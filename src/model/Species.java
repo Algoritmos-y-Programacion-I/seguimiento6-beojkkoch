@@ -1,6 +1,6 @@
 package model;
 
-public class Species {
+public abstract class Species {
 
 	private String name;
 	private String scientificName;
@@ -9,7 +9,6 @@ public class Species {
 
 		this.name = name;
 		this.scientificName = scientificName;
-
 	}
 
 	public String getName() {
@@ -27,5 +26,10 @@ public class Species {
 	public void setScientificName(String scientificName) {
 		this.scientificName = scientificName;
 	}
+
+	@Override
+    public String toString() {
+        return "Name: " + name + " - Scientific Name: " + scientificName;
+    }
 
 }
